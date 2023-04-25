@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BE-SEEDS LAB - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="BE-SEEDS_logo.png" alt="RiseLab Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index_about.html">About Us</a></li>
+        <li><a href="index_research.html">Research</a></li>
+        <li><a href="index_people.html">People</a></li>
+        <li><a href="index_publications.html">Publications</a></li>
+        <li><a href="index_contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main style="position: relative;">
+    <video autoplay muted loop style="width: 110vw; height: auto; margin:0; padding: 0;">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div style="position: absolute; top: 10%; left: 100%; transform: translate(30%, 0%); font-size: 48px; color: white; letter-spacing: 0.05em;">FOR THE FUTURE</div>
+  </main>
+  
+  
+  
+  
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 RE-SEEDS LAB. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    let slider = document.getElementById("slider");
+    let videos = ["video.mp4"];
+    let currentIndex = 0;
+
+    function playVideo() {
+      slider.setAttribute("src", videos[currentIndex]);
+      slider.play();
+      currentIndex++;
+      if (currentIndex === videos.length) {
+        currentIndex = 0;
+      }
+    }
+
+    slider.addEventListener('ended', playVideo);
+    playVideo();
+  </script>
+</body>
+</html>
